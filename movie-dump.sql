@@ -11,10 +11,10 @@ DROP TABLE IF EXISTS MOVIE;
 CREATE TABLE MOVIE
 (
   movie_id int NOT NULL AUTO_INCREMENT,
-  title varchar(64),
-  release_date varchar(64),
+  title varchar(64) NOT NULL,
+  release_date varchar(64) NOT NULL,
   summary varchar(1024),
-  language varchar(64),
-  duration int,
+  language varchar(64) NOT NULL,
+  duration int NOT NULL,
   PRIMARY KEY (movie_id)
 );
