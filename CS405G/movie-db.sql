@@ -3,6 +3,7 @@ CREATE DATABASE Databased_movie;
 
 USE Databased_movie;
 
+/* --------------Main Tables-------------- */
 DROP TABLE IF EXISTS MOVIE;
 CREATE TABLE MOVIE
 (
@@ -82,6 +83,7 @@ CREATE TABLE LOGIN
   FOREIGN KEY (user_id) REFERENCES USER(user_id)
 );
 
+/* --------------Relationship Tables-------------- */
 DROP TABLE IF EXISTS has_members;
 CREATE TABLE has_members
 (
@@ -131,6 +133,7 @@ CREATE TABLE has_tags
   FOREIGN KEY (movie_id) REFERENCES MOVIE(movie_id)
 );
 
+/* --------------Example Insertions-------------- */
 INSERT INTO MOVIE(title, release_date, summary, language, duration) VALUES
 ('Neighbors', '05/09/2014', 'Neighbors is a 2014 American comedy film directed by Nicholas Stoller', 'English', 97),
 ('Neighbors 2', '05/20/2016', 'Now that Mac and Kelly Radner have a second baby on the way, they are ready to make the final move into adulthood: the suburbs.', 'English', 92),
